@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercici 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONANIMAL</title>
+  <link href="7.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <H1>Exercici 1</H1>
+
+  <header>
+    <img class="botigaimatge" src="fotos/fototienda1.jpeg" alt="Imatge de la botiga">
+    <h1 class="nombotiga">MONANIMAL</h1>
+    <nav id="12">
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#productes">Productes</a></li>
+        <li><a href="#serveis">Serveis</a></li>
+        <li><a href="#contacte">Contacte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="Menu">  
+  </section>
+
+  <section id="productes">
+    <h2 class="descripciobotiga">Els millors animals de companyia per a tots els gustos.</h2>
+
+    <div class="producte">
+      <article class="product-box">
+        <img src="fotos/fotogato.jpg" alt="Gato Feliz">
+        <h2>Gat Amorós</h2>
+        <p class="productedescripcio">Un gat carinyós perfecte per als amants dels gats. Amb el seu pelatge suau i ulls tendres, farà les delícies de tota la família.</p>
+        <p class="productepreu">Preu: 500€</p>
+        <a href="#">Més informació</a>
+      </article>
+
+      <article class="product-box">
+        <img src="fotos/fotoperrro.jpg" alt="Perro humano">
+        <h2>Gos ballarí</h2>
+        <p class="productedescripcio">Aquest gos té una habilitat única per ballar al ritme de la música. Serà el teu company perfecte per a festes i esdeveniments.</p>
+        <p class="productepreu">Preu: 3000€</p>
+        <a href="#">Més informació</a>
+      </article>
+
+      <article class="product-box">
+        <img src="fotos/monoserio2.jpg" alt="Monoserio">
+        <h2>Mico Amigable</h2>
+        <p class="productedescripcio">Un mico simpàtic i amistós que farà les delícies de grans i petits. Amb les seves habilitats divertides, serà el protagonista de la teva llar.</p>
+        <p class="productepreu">Preu: 100€</p>
+        <a href="#">Ampliar informació</a>
+      </article>
+
+     
+     <article class="product-box">
+      <img src="fotos/fotocaballo.jpg" alt="Caballo Ronnie coleman">
+      <h2>Cavall Gymbro</h2>
+      <p class="productedescripcio">Aquest cavall està llest per acompanyar-te en les teves aventures d'entrenament. Amb una musculatura impressionant, serà el teu company d'entrenament ideal.</p>
+      <p class="productepreu">Preu: 3500€</p>
+      <a href="#">Ampliar informació</a>
+    </article>
+
+    
+    <article class="product-box">
+      <img src="fotos/mono-francotirador.jpg" alt="Mono facha">
+      <h2>Mico Francotirador</h2>
+      <p class="productedescripcio">Un mico amb habilitats excepcionals de tirador d'elit. Si busques un company intel·ligent i astut, aquest és el teu mico.</p>
+      <p class="productepreu">Preu: 1000€</p>
+      <a href="#">Ampliar informació</a>
+    </article>
+
+   
+    <article class="product-box">
+      <img src="fotos/fototroll.jpg" alt="Un buen troll">
+      <h2>Troll</h2>
+      <p class="productedescripcio">Aquest troll simpàtic està llest per portar somriures i riures a la teva vida. Amb el seu sentit de l'humor, serà el teu amic més bufó.</p>
+      <p class="productepreu">Preu: 50€</p>
+      <a href="#">Ampliar informació</a>
+    </article>
+  </div>
+
+    </div>
+  </section>
+  <form method="post">
+    <div class="form-row">
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom">
+    </div>
+    <div class="form-row">
+      <label for="cognom">Cognom:</label>
+      <input type="text" id="cognom" name="cognom" >
+    </div>
+    <div class="form-row">
+      <label for="assumpte">Assumpte:</label>
+      <input type="text" id="assumpte" name="assumpte" >
+    </div>
+    <div class="form-row">
+      <label for="pais">País:</label>
+      <select id="pais" name="pais">
+        <option value="pais1">País 1</option>
+        <option value="pais2">País 2</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="missatge">Missatge:</label>
+      <textarea id="missatge" name="missatge" ></textarea>
+    </div>
+    <input class="submit-btn" type="submit" value="Enviar">
+  </form>
+
+  <footer>
+    <p>&copy;Copyright</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="fotos/feisbuk.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="fotos/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://twitter.com/" target="_blank">
+        <img src="fotos/xx.png" alt="Twitter">
+      </a>
+      <a href="https://api.whatsapp.com/" target="_blank">
+        <img src="fotos/whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
+
+
+
