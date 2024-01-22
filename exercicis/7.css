@@ -1,133 +1,133 @@
 body {
-      background-color: lightblue; 
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+  background-color: lightblue;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-    header {
-      text-align: center;
-      padding: 20px;
-      color: rgb(0, 0, 0);
-    }
+header {
+  text-align: center;
+  padding: 2%;
+  color: rgb(0, 0, 0);
+}
 
-    nav {
-      background-color: black;
-      text-align: center;
-      padding: 10px;
-    }
+nav {
+  background-color: black;
+  text-align: center;
+  padding: 1%;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 10px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1%;
+}
 
-    nav a:hover {
-      background-color: #555;
-    }
+nav a:hover {
+  background-color: #555;
+}
 
-    .botigaimatge {
-      width: 100%;
-    }
+.botigaimatge {
+  width: 100%;
+}
 
-    .nombotiga {
-      text-align: center;
-      font-size: 24px;
-      margin: 10px;
-      color: rgb(255, 0, 0);
-    }
+.nombotiga {
+  text-align: center;
+  font-size: 100px;
+  margin: 1%;
+  color: rgb(255, 0, 0);
+}
 
-    .descripciobotiga {
-      text-align: center;
-      margin: 20px;
-      color: rgb(31, 0, 71);
-    }
+.descripciobotiga {
+  text-align: center;
+  margin: 2%;
+  color: rgb(31, 0, 71);
+}
 
-    .producte {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
+.producte {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
-    .product-box {
-      width: 30%;
-      margin: 1%;
-      background-color: #fff;
-      padding: 10px;
-      text-align: center;
-      box-sizing: border-box;
-    }
+.product-box {
+  width: 30%;
+  margin: 1%;
+  background-color: #fff;
+  padding: 2%;
+  text-align: center;
+  box-sizing: border-box;
+}
 
-    .product-box img {
-      width: 100%;
-      border-radius: 8px;
-    }
+.product-box img {
+  width: 100%;
+  border-radius: 8px;
+}
 
-    .productedescripcio{
-      font-size: 16px;
-      margin-top: 10px;
-    }
+.productedescripcio {
+  font-size: 16px; 
+  margin-top: 10px;
+}
 
-    .productepreu {
-      font-size: 18px;
-      font-weight: bold;
-      color: #333;
-      margin-top: 5px;
-    }
+.productepreu {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0.5%;
+}
 
-    form {
-      text-align: center;
-      padding: 20px;
-      border: 2px solid black;
-      border-radius: 8px;
-      box-sizing: border-box;
-      margin-bottom: 50px;
-    }
+form {
+  text-align: center;
+  padding: 2%;
+  border: 2px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 5%;
+}
 
-    .form-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1%;
+}
 
-    .form-row label {
-      width: 30%;
-      text-align: left;
-    }
+.form-row label {
+  width: 30%;
+  text-align: left;
+}
 
-    .form-row select,
-    .form-row textarea {
-      width: 65%;
-    }
+.form-row select,
+.form-row textarea {
+  width: 65%;
+}
 
-    .submit-btn {
-      width: 100%;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.submit-btn {
+  width: 100%;
+  padding: 1%;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: auto;
-    }
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1%;
+  margin-top: auto;
+}
 
-    .social-icons {
-      margin-top: 10px;
-    }
+.social-icons {
+  margin-top: 1%;
+}
 
-    .social-icons a {
-      margin: 0 5px;
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-    }
+.social-icons a {
+  margin: 0 0.5%;
+  color: white;
+  text-decoration: none;
+  font-size: 2%;
+}
