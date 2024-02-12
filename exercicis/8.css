@@ -1,0 +1,156 @@
+body {
+    background-image: url(fotos_ex2/ultimafoto.avif);
+    margin: 1%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 192%;
+    border: 5px solid rgb(255, 255, 255); /* Añade un borde negro sólido de 2px */
+    margin: 0; /* Elimina el margen predeterminado */
+    box-sizing: border-box; /* Asegura que el ancho del borde se incluya en el ancho del elemento */
+    color: white;
+}
+
+  
+  header {
+    text-align: center;
+    padding: 2%;
+    color: black;
+    background-image: url(fotos_ex2/fondoheader.jpg);
+  }
+  .grupimatge{
+    width: 50%;
+    border-radius: 35%;
+    border: 2px solid white;
+   
+  }
+ .nomgrup {
+  text-align: center;
+  font-size: 24px;
+  margin: 1% auto; /* Actualiza los márgenes para centrar horizontalmente */
+  font-family: Impact;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid white;
+  width: 200px; /* Ancho deseado para el elemento */
+  display: block; /* Asegúrate de que .nomgrup se trate como un bloque */
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+/* Estilos para el contenedor del enlace oficial */
+.enlace-oficial {
+  background: linear-gradient(to bottom, #333, #000); /* Degradado de negro a gris oscuro */
+  padding: 10px; /* Espacio alrededor del enlace */
+  border: 2px solid white; /* Borde blanco sólido de 2px */
+  border-radius: 5px; /* Bordes redondeados */
+  display: inline-block; /* Hace que el contenedor se ajuste al contenido */
+}
+
+/* Estilos para el enlace */
+.enlace-oficial a {
+  color: white; /* Color del texto blanco */
+  text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+}
+
+.caja-externa {
+  background-color: black; /* Fondo negro */
+  border: 2px solid white; /* Bordes blancos */
+  padding: 10px; /* Reduce el espacio interior para hacer la caja más compacta */
+  border-radius: 10px; /* Opcional: bordes redondeados */
+  width: 350px; /* Ancho más pequeño de la caja */
+  float: right; /* Alinea la caja a la derecha */
+  margin-left: 20px; /* Espacio desde el borde izquierdo de la página */
+}
+
+.contenedor {
+  position: relative;
+  width: 300px; /* Ancho del contenedor */
+  height: 300px; /* Altura del contenedor */
+  margin: 20px auto; /* Centra el contenedor en la caja */
+  overflow: hidden; /* Asegura que el contenido no sobresalga */
+  border-radius: 10px;
+}
+
+.imagen {
+  width: 100%; /* Ancho de la imagen */
+  height: 200px; /* Altura de la imagen */
+  object-fit: cover; /* Ajusta la imagen para que cubra completamente el contenedor */
+}
+
+audio {
+  width: 100%; /* Asegura que el elemento de audio ocupe todo el ancho del contenedor */
+}
+
+h2 {
+  color: white; /* Título en blanco */
+  text-align: center; /* Centra el título */
+  font-size: 1.2em; /* Ajusta el tamaño del texto del título si es necesario */
+}
+.contenedor-imagen {
+  background-color: black; /* Fondo negro para el contenedor */
+  width: fit-content; /* Ajusta el ancho del contenedor al contenido */
+  padding: 10px; /* Espacio alrededor del contenido dentro del contenedor */
+  margin: 20px; /* Margen alrededor del contenedor para separarlo de otros elementos */
+  border-radius: 5px; /* Bordes redondeados para el contenedor */
+  height: auto; /* Ajusta automáticamente la altura según el contenido */
+  border:2px solid white;
+}
+
+.contenedor-imagen img {
+  width: 100%; /* Ancho de la imagen ajustado al contenedor */
+  height: 200px; /* Altura fija para la imagen */
+  object-fit: cover; /* Ajusta la imagen para que cubra completamente el área disponible */
+}
+
+.contenedor-imagen p {
+  color: white; /* Texto en color blanco */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  margin-top: 10px; /* Espacio entre la imagen y la descripción */
+  font-size: 10px;
+}
+
+.contenedor-imagen1{
+  background-color: black; /* Fondo negro para el contenedor */
+  width: fit-content; /* Ajusta el ancho del contenedor al contenido */
+  padding: 10px; /* Espacio alrededor del contenido dentro del contenedor */
+  margin: 20px; /* Margen alrededor del contenedor para separarlo de otros elementos */
+  border-radius: 5px; /* Bordes redondeados para el contenedor */
+  height: auto; /* Ajusta automáticamente la altura según el contenido */
+  border:2px solid white;
+}
+
+.contenedor-imagen1 img {
+  width: 100%; /* Ancho de la imagen ajustado al contenedor */
+  height: 200px; /* Altura fija para la imagen */
+  object-fit: cover; /* Ajusta la imagen para que cubra completamente el área disponible */
+
+}
+
+.contenedor-imagen1 p {
+  color: white; /* Texto en color blanco */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  margin-top: 10px; /* Espacio entre la imagen y la descripción */
+  font-size: 10px;
+}
+
+.contendor-imagen2{
+background-color: black; /* Fondo negro para el contenedor */
+  width: fit-content; /* Ajusta el ancho del contenedor al contenido */
+  padding: 10px; /* Espacio alrededor del contenido dentro del contenedor */
+  margin: 20px; /* Margen alrededor del contenedor para separarlo de otros elementos */
+  border-radius: 5px; /* Bordes redondeados para el contenedor */
+  height: auto; /* Ajusta automáticamente la altura según el contenido */
+  border:2px solid white;
+}
+
+.contenedor-imagen2 p{
+  color: white; /* Texto en color blanco */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  margin-top: 10px; /* Espacio entre la imagen y la descripción */
+  font-size: 10px;
+}
+
+
+
