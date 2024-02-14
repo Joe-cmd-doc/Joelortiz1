@@ -5,16 +5,18 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 192%;
-    border: 5px solid rgb(255, 255, 255); /* Añade un borde negro sólido de 2px */
-    margin: 0; /* Elimina el margen predeterminado */
-    box-sizing: border-box; /* Asegura que el ancho del borde se incluya en el ancho del elemento */
+    border: 0,5% solid rgb(255, 255, 255); 
+   
+    box-sizing: border-box; 
     color: white;
+    padding: 0;
+    
 }
 
   
   header {
     text-align: center;
-    padding: 2%;
+    padding: 2% 5%; 
     color: black;
     background-image: url(fotos_ex2/fondoheader.jpg);
   }
@@ -26,131 +28,212 @@ body {
   }
  .nomgrup {
   text-align: center;
-  font-size: 24px;
-  margin: 1% auto; /* Actualiza los márgenes para centrar horizontalmente */
+  font-size: 2,4%;
+  margin: 1% auto; 
   font-family: Impact;
   color: rgb(255, 255, 255);
   background-color: black;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 1%;
+  border-radius: 0,5%;
   border: 2px solid white;
-  width: 200px; /* Ancho deseado para el elemento */
-  display: block; /* Asegúrate de que .nomgrup se trate como un bloque */
-  letter-spacing: 1px;
-  word-spacing: 4px;
-}
-/* Estilos para el contenedor del enlace oficial */
-.enlace-oficial {
-  background: linear-gradient(to bottom, #333, #000); /* Degradado de negro a gris oscuro */
-  padding: 10px; /* Espacio alrededor del enlace */
-  border: 2px solid white; /* Borde blanco sólido de 2px */
-  border-radius: 5px; /* Bordes redondeados */
-  display: inline-block; /* Hace que el contenedor se ajuste al contenido */
+  width: 20%; 
+  display: block; 
+  letter-spacing: 0,1%;
+  word-spacing: 0,4%;
 }
 
-/* Estilos para el enlace */
+.enlace-oficial {
+  background: linear-gradient(to bottom, #333, #000); 
+  padding: 1%; 
+  border: 2px solid white; 
+  border-radius: 0,5%; 
+  display: inline-block;
+}
+
+
 .enlace-oficial a {
-  color: white; /* Color del texto blanco */
-  text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+  color: white; 
+  text-decoration: none; 
 }
 
 .caja-externa {
-  background-color: black; /* Fondo negro */
-  border: 2px solid white; /* Bordes blancos */
-  padding: 10px; /* Reduce el espacio interior para hacer la caja más compacta */
-  border-radius: 10px; /* Opcional: bordes redondeados */
-  width: 350px; /* Ancho más pequeño de la caja */
-  float: right; /* Alinea la caja a la derecha */
-  margin-left: 20px; /* Espacio desde el borde izquierdo de la página */
+  background-color: black; 
+  border: 2px solid rgb(0, 255, 255);
+  padding: 10px; 
+  border-radius: 10px; 
+  width: 30%;
+  float: right; 
+  margin-left: 2%; 
 }
 
 .contenedor {
   position: relative;
-  width: 300px; /* Ancho del contenedor */
-  height: 300px; /* Altura del contenedor */
-  margin: 20px auto; /* Centra el contenedor en la caja */
-  overflow: hidden; /* Asegura que el contenido no sobresalga */
-  border-radius: 10px;
+  width: 70%;
+  height: 40%; 
+  margin: 2% auto; 
+  overflow: hidden;
+  border-radius: 1%;
 }
 
 .imagen {
-  width: 100%; /* Ancho de la imagen */
-  height: 200px; /* Altura de la imagen */
-  object-fit: cover; /* Ajusta la imagen para que cubra completamente el contenedor */
+  width: 100%; 
+  height: 70%; 
+  object-fit: cover; 
 }
 
 audio {
-  width: 100%; /* Asegura que el elemento de audio ocupe todo el ancho del contenedor */
+  width: 100%; 
 }
 
 h2 {
-  color: white; /* Título en blanco */
-  text-align: center; /* Centra el título */
-  font-size: 1.2em; /* Ajusta el tamaño del texto del título si es necesario */
+  color: white;
+  text-align: center; 
+  font-size: 70%; 
 }
 .contenedor-imagen {
-  background-color: black; /* Fondo negro para el contenedor */
-  width: fit-content; /* Ajusta el ancho del contenedor al contenido */
-  padding: 10px; /* Espacio alrededor del contenido dentro del contenedor */
-  margin: 20px; /* Margen alrededor del contenedor para separarlo de otros elementos */
-  border-radius: 5px; /* Bordes redondeados para el contenedor */
-  height: auto; /* Ajusta automáticamente la altura según el contenido */
-  border:2px solid white;
+  background-color: black; 
+  width: 90%; 
+  padding: 1%; 
+  margin: 5% auto; 
+  border-radius: 5px; 
+  border:2px solid rgb(255, 0, 0);
+  height: 30%;
 }
 
 .contenedor-imagen img {
-  width: 100%; /* Ancho de la imagen ajustado al contenedor */
-  height: 200px; /* Altura fija para la imagen */
-  object-fit: cover; /* Ajusta la imagen para que cubra completamente el área disponible */
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
 }
 
 .contenedor-imagen p {
-  color: white; /* Texto en color blanco */
-  text-align: center; /* Centra el texto dentro del contenedor */
-  margin-top: 10px; /* Espacio entre la imagen y la descripción */
-  font-size: 10px;
+  color: white;
+  text-align: center; 
+  margin-top: 1%;
+  font-size: 70%;
 }
 
 .contenedor-imagen1{
-  background-color: black; /* Fondo negro para el contenedor */
-  width: fit-content; /* Ajusta el ancho del contenedor al contenido */
-  padding: 10px; /* Espacio alrededor del contenido dentro del contenedor */
-  margin: 20px; /* Margen alrededor del contenedor para separarlo de otros elementos */
-  border-radius: 5px; /* Bordes redondeados para el contenedor */
-  height: auto; /* Ajusta automáticamente la altura según el contenido */
-  border:2px solid white;
+  background-color: black; 
+  width: 90%; 
+  padding: 1%; 
+  margin: 5% auto; 
+  border-radius: 5px;
+  border:2px solid rgb(30, 255, 0);
+  height: 30%;
+  
 }
 
 .contenedor-imagen1 img {
-  width: 100%; /* Ancho de la imagen ajustado al contenedor */
-  height: 200px; /* Altura fija para la imagen */
-  object-fit: cover; /* Ajusta la imagen para que cubra completamente el área disponible */
-
+  width: 100%; 
+  height: 20%; 
+  object-fit: cover; 
 }
 
 .contenedor-imagen1 p {
-  color: white; /* Texto en color blanco */
-  text-align: center; /* Centra el texto dentro del contenedor */
-  margin-top: 10px; /* Espacio entre la imagen y la descripción */
-  font-size: 10px;
+  color: white; 
+  text-align: center; 
+  margin-top: 1%; 
+  font-size: 70%;
 }
 
-.contendor-imagen2{
-background-color: black; /* Fondo negro para el contenedor */
-  width: fit-content; /* Ajusta el ancho del contenedor al contenido */
-  padding: 10px; /* Espacio alrededor del contenido dentro del contenedor */
-  margin: 20px; /* Margen alrededor del contenedor para separarlo de otros elementos */
-  border-radius: 5px; /* Bordes redondeados para el contenedor */
-  height: auto; /* Ajusta automáticamente la altura según el contenido */
-  border:2px solid white;
+.contenedor-imagen2{
+  background-color: black;
+  width: 90%; 
+  padding: 1%;
+  margin: 5% auto; 
+  border-radius: 5px; 
+  height: 30%; 
+  border:2px solid rgb(246, 255, 0);
+}
+.contenedor-imagen2 img{
+  width: 100%;
+  height: 20%; 
+  object-fit: cover; 
 }
 
 .contenedor-imagen2 p{
-  color: white; /* Texto en color blanco */
-  text-align: center; /* Centra el texto dentro del contenedor */
-  margin-top: 10px; /* Espacio entre la imagen y la descripción */
-  font-size: 10px;
+  color: white; 
+  text-align: center; 
+  margin-top: 1%; 
+  font-size: 70%;
 }
 
+.contenedor0{
+  display:flex;
+}
 
+.contenedor0 div{
+  margin: 1%; 
+  padding: 1%;
+}
 
+.caja-negra {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid blue; 
+  width: fit-content;
+  
+}
+
+.caja-negra h2{
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; 
+  margin: 1% 0; 
+}
+
+table, th, td {
+  border: 1px solid rgb(255, 255, 255); 
+}
+
+th, td {
+  text-align: center;
+  padding: 0,01%; 
+}
+
+th {
+  background-color: #000000; 
+  height: 50px; 
+}
+
+td {
+  height: 40px;
+}
+
+.contenedor-flex {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.video {
+  margin-bottom: 2%;
+  width: 30%;
+  height: 16,9%; 
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 2% 0; 
+  border: 5px solid rgb(255, 0, 0);
+}
+
+.center-map {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; 
+}
