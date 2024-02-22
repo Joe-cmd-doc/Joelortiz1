@@ -1,1 +1,64 @@
+header{
+    background-color: bisque;
+    text-align: center;
+    font-style: oblique;
+    font-size: large;
+    color: black;
+    
+}
 
+
+
+body{
+    background-color: blanchedalmond;
+}
+body h1 {
+    text-align: center;
+}
+
+.primera_caja {
+
+    text-align: center;
+    font-size: 2,4%;
+    margin: 1% auto; 
+    font-family: Impact;
+    color: rgb(0, 0, 0);
+    background-color:blanchedalmond;
+    padding: 1%;
+    border-radius: 0,5%;
+    border: 2px solid white;
+    width: 20%; 
+    display: block; 
+    letter-spacing: 0,1%;
+    word-spacing: 0,4%;
+    
+
+}
+.segundacaja{
+
+    column-count: 2;
+    column-gap: 4%;
+    column-rule-style: solid;
+
+}
+
+@media (max-width: 575px) {
+    .primera_caja {
+        width: 80%; }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+   
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) {
+}
