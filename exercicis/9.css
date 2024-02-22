@@ -11,9 +11,20 @@ header{
 
 body{
     background-color: blanchedalmond;
+    
+
+   
 }
 body h1 {
     text-align: center;
+}
+
+.cajazero{
+    column-count: 2;
+    column-rule-style: solid;
+    column-rule-color: brown;
+    column-rule-style:dashed;
+    
 }
 
 .primera_caja {
@@ -37,10 +48,23 @@ body h1 {
 .segundacaja{
 
     column-count: 2;
-    column-gap: 4%;
     column-rule-style: solid;
 
 }
+
+.terceracaja h2{
+    text-align: center;
+}
+
+.terceracaja img{
+
+    width:32%;
+    height: 50%;
+    border-radius: 10%;
+
+    
+}
+
 
 @media (max-width: 575px) {
     .primera_caja {
@@ -62,3 +86,4 @@ body h1 {
 
 @media (min-width: 1200px) {
 }
+
