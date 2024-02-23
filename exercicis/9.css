@@ -61,10 +61,22 @@ body h1 {
     width:32%;
     height: 50%;
     border-radius: 10%;
+   
+    
+    
 
     
 }
+.terceracaja iframe{
 
+    border-radius: 5%;
+   
+    
+}
+footer{
+
+    text-align: center;
+}
 
 @media (max-width: 575px) {
     .primera_caja {
