@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carta de Presentació</title>
 <style>
-/* Google Fonts Import */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Estilos generales */
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-image: url("./fotoindex/77420df3f9e33db5b79ee25455d3340e.png")/* Fondo más suave */
+  background-image: url("./fotoindex/77420df3f9e33db5b79ee25455d3340e.png"); /* Fondo más suave */
 }
 
 .container {
@@ -20,8 +20,45 @@ body {
   max-width: 800px;
   margin: auto;
   padding: 20px;
-  background-color: #fff; /* Fondo blanco para el contenido */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background: linear-gradient(45deg, #f3f3f3, #ffffff); /* Fondo degradado */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+  border: 2px solid #007bff; /* Borde azul aplicado directamente al contenedor */
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+.container .main {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo de los elementos principales */
+  border-radius: 20px; /* Bordes redondeados para los elementos principales */
+  padding: 20px;
+}
+
+.container .main h2 {
+  color: #007bff; /* Color del título */
+  border-bottom: 2px solid #007bff; /* Línea inferior para el título */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.container .main p {
+  color: #333; /* Color del texto */
+  line-height: 1.6; /* Espaciado de línea */
+}
+
+.container .footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer h2 {
+  color: #007bff; /* Color del título */
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: #333; /* Color del texto */
 }
 
 /* Estilos para la hero-image en la cabecera */
@@ -37,8 +74,6 @@ body {
   text-align: center;
   border-radius: 30px;
 }
-
-
 
 .hero-text {
   position: absolute;
@@ -110,10 +145,10 @@ button:hover {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-  .hero-image {
-    height: 300px;
+  .container {
+    padding: 15px; /* Menos padding para más espacio */
   }
-  
+
   .hero-text h1 {
     font-size: 28px;
   }
@@ -121,13 +156,18 @@ button:hover {
   .hero-text h3 {
     font-size: 20px;
   }
+
+  .navbar a {
+    padding: 10px 12px; /* Ajuste para elementos de navegación */
+    font-size: 15px; /* Tamaño de fuente más pequeño */
+  }
 }
 
 @media screen and (max-width: 480px) {
-  .hero-image {
-    height: 200px;
+  .container {
+    padding: 10px;
   }
-  
+
   .hero-text h1 {
     font-size: 24px;
   }
@@ -137,10 +177,33 @@ button:hover {
   }
 
   .navbar a {
-    padding: 10px;
-    font-size: 14px;
+    padding: 8px 10px;
+    font-size: 14px; /* Aún más pequeño para pantallas muy pequeñas */
   }
 }
+
+.exercise-link {
+  display: inline-block; /* Esto permite aplicar la transición a la opacidad */
+  margin: 10px; /* Espacio alrededor de las imágenes */
+  border: 3px solid transparent; /* Prepara un borde para el efecto hover */
+  transition: transform 0.3s, box-shadow 0.3s; /* Suaviza la transformación y la sombra */
+}
+
+.exercise-image {
+  width: 150px; /* Ajusta este valor según necesites */
+  transition: opacity 0.3s; /* Suaviza la transición de opacidad */
+  border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.exercise-link:hover .exercise-image {
+  opacity: 0.7; /* Reduce la opacidad al pasar el mouse para dar efecto de botón */
+}
+
+.exercise-link:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Añade una sombra para destacar */
+}
+
 </style>
 </head>
 <body>
@@ -158,9 +221,15 @@ button:hover {
   <div id="header" class="hero-image">
     <div class="hero-text">
       <h1>¡Hola, em dic Joel!</h1>
-      <h3>I estic estudiant DAM</h3>
-      <a href="Joel Ortiz Rivas.pdf" download="curriculum"><button>Descarregar el currículum en PDF</button></a>
+      <h3>I això és la meva carta de presentació</h3>
+      <button>Contacta'm</button>
     </div>
+  </div>
+
+  <div id="studies" class="main">
+    <h2>Estudis</h2>
+    <p>Batxillerat cientific-tecnologic</p>
+    <p>Cursant un grau superior de DAM</p>
   </div>
 
   <div id="projects" class="main projects">
@@ -170,22 +239,39 @@ button:hover {
 
   <div id="exercises" class="main">
     <h2>Exercicis HTML</h2>
-    <!-- Aquí pots posar enllaços als exercicis HTML -->
-    <a href="./exercicis/ex1.html">Exercici 1</a><br><br>
-    <a href="./exercicis/Ex2.html">Exercici 2</a><br><br>
-    <a href="./exercicis/Ex3.html">Exercici 3</a>
+    <!-- Ejercicio 1 -->
+    <a href="./exercicis/ex1.html" class="exercise-link">
+      <img src="./fotoindex/descarga.jpg" alt="Exercici 1" class="exercise-image"> <!-- Cambia "path_to_your_image_for_ex1.jpg" por la ruta de tu imagen -->
+    </a>
+    <!-- Ejercicio 2 -->
+    <a href="./exercicis/Ex2.html" class="exercise-link">
+      <img src="./fotoindex/descarga 2.jpg" alt="Exercici 2" class="exercise-image"> <!-- Cambia "path_to_your_image_for_ex2.jpg" por la ruta de tu imagen -->
+    </a>
+    <!-- Ejercicio 3 -->
+    <a href="./exercicis/Ex3.html" class="exercise-link">
+      <img src="./fotoindex/descarga 3.jpg" alt="Exercici 3" class="exercise-image"> <!-- Cambia "path_to_your_image_for_ex3.jpg" por la ruta de tu imagen -->
+    </a>
   </div>
 
   <div id="about" class="main about">
     <h2>Sobre mi</h2>
-    <p>Aquí pots posar informació sobre tu, els teus hobbies, interessos, etc.</p>
+    <p>En el meu temps lliure, gaudeixo d'activitats com anar al gimnàs per mantenir-me actiu i en forma. La lectura és una altra de les meves passions, ja que em permet aprendre i explorar nous mons a través de les pàgines dels llibres. A més, em fascina la informàtica i sempre estic interessat en aprendre noves tecnologies i explorar les últimes tendències en el món de la tecnologia.</p>
   </div>
 
   <div id="contact" class="footer">
     <h2>Contacte</h2>
-    <p>Pots contactar-me a: email@example.com</p>
+    <p>Pots contactar-me a: joelortizrivas@gmail.com</p>
   </div>
 </div>
-
+<script>
+  function myFunction() {
+    var x = document.getElementById("myNavbar");
+    if (x.className === "navbar") {
+      x.className += " responsive";
+    } else {
+      x.className = "navbar";
+    }
+  }
+  </script>
 </body>
 </html>
