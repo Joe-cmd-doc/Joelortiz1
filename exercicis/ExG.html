@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whac-A-Mole</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #FFF;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 100px auto;
+      border: 2px solid #FFF;
+      background-color: #654321; 
+      border-radius: 15px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .hole {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .hole img {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      border-radius: 1px;
+    }
+
+    .hole img:hover {
+      transform: scale(1.1);
+    }
+
+    #puntuacio {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: red;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: 300px;
+        height: 300px;
+      }
+
+      .hole {
+        grid-template-columns: repeat(3, 1fr); 
+      }
+
+      .hole img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Whac-A-Mole</h1>
+  <div id="puntuacio">Puntuació: <span id="puntuacio-valor">0</span></div>
+  <div class="container">
+    <div class="hole">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+      <img src="./Exercici G/topoNo.jpg" alt="Topo">
+    </div>
+  </div>
+
+  <script>
+    const imatgesTopo = document.querySelectorAll('.hole img');
+    const puntuacioSpan = document.getElementById('puntuacio-valor');
+  
+    function obtenirNumeroAleatori(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+  
+    function mostrarTopoAleatori() {
+        imatgesTopo.forEach(img => img.src = "./Exercici G/topoNo.jpg");
+        const indexAleatori = obtenirNumeroAleatori(0, imatgesTopo.length);
+        imatgesTopo[indexAleatori].src = "./Exercici G/topoSi.jpg";
+        setTimeout(() => {
+            if (!imatgesTopo[indexAleatori].classList.contains('amagat')) {
+                imatgesTopo[indexAleatori].src = "./Exercici G/topoNo.jpg";
+            }
+        }, 2000);
+        setTimeout(mostrarTopoAleatori, obtenirNumeroAleatori(500, 1500));
+    }
+  
+    function gestionarClicTopo(event) {
+        
+        if (event.target.src.includes('topoSi.jpg')) {
+            let puntuacioActual = parseInt(puntuacioSpan.textContent);
+            puntuacioSpan.textContent = ++puntuacioActual;
+    
+            var audio = new Audio('./Exercici G/boing.mp3');
+            audio.play();
+            
+            event.target.src = "./Exercici G/topoPam.jpg";
+            setTimeout(() => {
+                event.target.src = "./Exercici G/topoNo.jpg";
+            }, 500);
+        }
+    }
+  
+    imatgesTopo.forEach(img => img.addEventListener('click', gestionarClicTopo));
+    mostrarTopoAleatori();
+</script>
+
+</body>
+</html>
