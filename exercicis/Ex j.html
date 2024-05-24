@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Preguntes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .pregunta {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+    <button onclick="calcularResultat()">Comprovar Resultats</button>
+    <div id="resultat"></div>
+
+    <script>
+        let preguntes = [
+            ["Quina és la capital de França", 4, "Cincinnati", "Lugo", "Castellbell", "Paris"],
+            ["A quin continent es troba Luxemburg?", 1, "Europa", "Amèrica", "Oceania"],
+            ["Quin és l'element químic amb el símbol 'O'?", 1, "Oxigen", "Or", "Osmi"],
+            ["Quin any va començar la Segona Guerra Mundial?", 1, "1939", "1914", "1945", "1963"],
+            ["Qui va pintar la Mona Lisa?", 1, "Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Claude Monet"],
+            ["Quin és el planeta més gran del sistema solar?", 1, "Júpiter", "Saturn", "Neptú", "Urà"],
+            ["Quin idioma és oficial a Brasil?", 1, "Portuguès", "Espanyol", "Francès"],
+            ["Quin és el riu més llarg del món?", 2, "Amazonas", "Nil", "Mississippi", "Yangtze"],
+            ["Quina ciutat és coneguda com la Gran Poma?", 1, "Nova York", "Londres", "París", "Tòquio"],
+            ["Quin és l'últim llibre de la Bíblia?", 1, "Apocalipsi", "Gènesi", "Èxode", "Levític"]
+        ];
+
+        function mostrarPreguntes() {
+            let testDiv = document.getElementById('test');
+            
+            for (let i = 0; i < preguntes.length; i++) {
+                let pregunta = preguntes[i];
+                
+                let preguntaDiv = document.createElement('div');
+                preguntaDiv.classList.add('pregunta');
+                
+                let preguntaText = document.createElement('p');
+                preguntaText.innerText = pregunta[0];
+                preguntaDiv.appendChild(preguntaText);
+
+                for (let j = 2; j < pregunta.length; j++) {
+                    let respostaInput = document.createElement('input');
+                    respostaInput.type = 'radio';
+                    respostaInput.name = 'pregunta' + i;
+                    respostaInput.value = j - 2;
+                    respostaInput.classList.add('respuesta-input');
+
+                    let respostaText = document.createTextNode(pregunta[j]);
+                    
+                    preguntaDiv.appendChild(respostaInput);
+                    preguntaDiv.appendChild(respostaText);
+                    preguntaDiv.appendChild(document.createElement('br'));
+                }
+                
+                testDiv.appendChild(preguntaDiv);
+            }
+        }
+
+        function calcularResultat() {
+            let encerts = 0;
+            
+            for (let i = 0; i < preguntes.length; i++) {
+                let pregunta = preguntes[i];
+                
+                let respostes = document.querySelectorAll('input[name="pregunta' + i + '"]');
+                
+                for (let j = 0; j < respostes.length; j++) {
+                    let resposta = respostes[j];
+                    
+                    if (resposta.checked && parseInt(resposta.value) === pregunta[1] - 1) {
+                        encerts++;
+                    }
+                }
+            }
+            
+            document.getElementById('resultat').innerText = 'Has encertat ' + encerts + ' de ' + preguntes.length + ' preguntes.';
+        }
+
+        mostrarPreguntes();
+    </script>
+</body>
+</html>

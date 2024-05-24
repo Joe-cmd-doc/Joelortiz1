@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Calcular de Celsius a Fahrenheit o Kelvin</h1>
+
+<label>Celsius (°C)</label>
+
+<input value="Posa un valor numeric" id="text1">
+
+<br>
+
+<input type="radio" name="status" id="v1">
+
+<label>Fahrenheit</label>
+
+<br>
+
+<input type="radio" name="status" id="v2">
+
+<label>Kelvin</label>
+
+<br>
+
+<button type="button" onclick="Factoritzar()">Factoritzar</button>
+
+<script>
+
+function Factoritzar() {
+    valor = parseInt(document.getElementById("text1").value);
+    let v1 = document.getElementById("v1").checked;
+    let v2 = document.getElementById("v2").checked;
+
+    if (v1) {
+        f = 32 + (1.8 * valor);
+        alert(f + "°F");
+    } else if (v2) {
+        k = valor + 273;
+        alert(k + "K");
+    } else {
+        alert("no s'ha introduit cap valor");
+    }
+}
+
+</script>
+
+</body>
+</html>

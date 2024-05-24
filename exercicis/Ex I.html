@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+</head>
+<body>
+
+    <h1>Piano</h1>
+    <div class="notes">
+        <button type="button" id="Do" onclick="Do()">Do</button>
+        <button type="button" id="Re" onclick="Re()">Re</button>
+        <button type="button" id="Mi" onclick="Mi()">Mi</button>
+        <button type="button" id="Fa" onclick="Fa()">Fa</button>
+        <button type="button" id="Sol" onclick="Sol()">Sol</button>
+        <button type="button" id="La" onclick="La()">La</button>
+        <button type="button" id="Si" onclick="Si()">Si</button>
+        
+        <p id="mostraNotes"></p>
+      
+        <button type="button" onclick="Esborra()">Esborra Memòria</button>
+        <button type="button" onclick="Play()">Play Memòria</button>
+    </div>  
+
+    <script>
+        let mostraNotes = []; 
+        
+        function mostraEnPantalla() {
+            document.getElementById('mostraNotes').innerHTML = mostraNotes;
+        }
+
+       
+        function Do() {
+            var audio = new Audio('./ExH notes/do.mp3');
+            audio.play();
+            mostraNotes.push('Do');
+            mostraEnPantalla();
+        }
+
+        function Re(){
+            var audio= new Audio('./ExH notes/re.mp3');
+            audio.play();
+            mostraNotes.push('Re');
+            mostraEnPantalla();
+        }
+
+        function Mi(){
+            var audio = new Audio('./ExH notes/mi.mp3');
+            audio.play();
+            mostraNotes.push('Mi');
+            mostraEnPantalla();
+        }
+
+        function Fa(){
+            var audio = new Audio('./ExH notes/Fa.mp3');
+            audio.play();
+            mostraNotes.push('Fa');
+            mostraEnPantalla();
+        }
+
+        function Sol(){
+            var audio = new Audio('./ExH notes/sol.mp3');
+            audio.play();
+            mostraNotes.push('Sol');
+            mostraEnPantalla();
+        }
+
+        function La(){
+            var audio = new Audio('./ExH notes/la.mp3');
+            audio.play();
+            mostraNotes.push('La');
+            mostraEnPantalla();
+        }
+
+        function Si(){
+            var audio = new Audio('./ExH notes/si.mp3');
+            audio.play();
+            mostraNotes.push('Si');
+            mostraEnPantalla();
+        }
+
+         
+        function Esborra() {
+            mostraNotes = [];
+            mostraEnPantalla();
+        }
+
+        
+        function Play() {
+            for (let i = 0; i < mostraNotes.length; i++) {
+                setTimeout(function() {
+                    var audio = new Audio('./ExH notes/' + mostraNotes[i] + '.mp3');
+                    audio.play();
+                }, i * 1000); 
+            }
+        }
+
+    </script>
+</body>
+</html>
