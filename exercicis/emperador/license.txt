@@ -1,0 +1,11 @@
+Model Information:
+* title:	EL PENSADOR - Artur Novoa Cabra
+* source:	https://sketchfab.com/3d-models/el-pensador-artur-novoa-cabra-47743888a27046469615157c5632c389
+* author:	Museu de l'Empordà (https://sketchfab.com/museuemporda)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "EL PENSADOR - Artur Novoa Cabra" (https://sketchfab.com/3d-models/el-pensador-artur-novoa-cabra-47743888a27046469615157c5632c389) by Museu de l'Empordà (https://sketchfab.com/museuemporda) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
