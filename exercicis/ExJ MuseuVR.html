@@ -4,24 +4,48 @@
   </head>
   <body>
   
-    <a-scene>
+    <a-scene cursor="rayOrigin: mouse">
+
       <a-assets>
-          <a-asset-item id="sala" src="sala/scene.gltf"></a-asset-item>
-          <a-asset-item id="emperador" src="./emperador/scene.gltf"></a-asset-item>
-
-          <img id="wood" src="./wood.jpg"></a-asset-item>
+        <a-asset-item id="sala" src="sala/scene.gltf"></a-asset-item>
+        <a-asset-item id="emperador" src="./emperador/scene.gltf"></a-asset-item>
+        <img id="wood" src="./wood.jpg"></a-asset-item>
       </a-assets>
+
+      <!-- Sky with built-in color -->
+      <a-sky color="#ECECEC"></a-sky>
+
+      <!-- Ambient Light -->
+      <a-light type="ambient" color="#445451"></a-light>
+
+      <!-- Directional Light to simulate sunlight -->
+      <a-light type="directional" color="#ffffff" intensity="1" position="-1 1 0"></a-light>
+
+      <!-- Sala Model -->
       <a-entity gltf-model="#sala" position="2 0 0" rotation="0 90 0" scale="1 1 1"></a-entity>
-      
-      
- 
+
+      <!-- Animated Emperador Model -->
       <a-entity gltf-model="#emperador" position="-0.4 1.7 -1.9" rotation="0 90 0" scale="1.4 1.4 1.4"
-      animation="property: position; dur: 2000; from: -0.4 1.7 -1.9; to: -0.4 1.8 -1.9; dir: alternate; loop: true">
+        animation="property: position; dur: 2000; from: -0.4 1.7 -1.9; to: -0.4 1.8 -1.9; dir: alternate; loop: true">
+      </a-entity>
 
+      <!-- Wooden Cylinder -->
+      <a-cylinder src="#wood" radius="0.2" height="2" segments-radial="6" position="0.2 0 -2"></a-cylinder>
 
-      <a-cylinder  src="#wood" radius="0.2" height="2" segments-radial="6" position="0.2 0 -2"></a-cylinder>
-  </a-scene>
+      <!-- Interactive Sphere -->
+      <a-sphere color="#EF2D5E" radius="1.25" position="0 1.25 -5"
+        animation__rotate="property: rotation; to: 0 360 0; loop: true; dur: 10000"
+        animation__scale="property: scale; dir: alternate; dur: 2000; to: 1.5 1.5 1.5; loop: true">
+        <a-animation attribute="position" to="0 1.5 -5" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+      </a-sphere>
 
+      <!-- Floor -->
+      <a-plane color="#7BC8A4" rotation="-90 0 0" width="20" height="20"></a-plane>
 
+      <!-- Text -->
+      <a-text value="Welcome to the VR Experience!" color="#FFFFFF" position="-1 2 -3" scale="2 2 2"></a-text>
+      
+    </a-scene>
+    
   </body>
 </html>
