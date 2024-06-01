@@ -24,9 +24,11 @@
       <!-- Sala Model -->
       <a-entity gltf-model="#sala" position="2 0 0" rotation="0 90 0" scale="1 1 1"></a-entity>
 
-      <!-- Animated Emperador Model -->
-      <a-entity gltf-model="#emperador" position="-0.4 1.7 -1.9" rotation="0 90 0" scale="1.4 1.4 1.4"
-        animation="property: position; dur: 2000; from: -0.4 1.7 -1.9; to: -0.4 1.8 -1.9; dir: alternate; loop: true">
+      <!-- Animated Emperador Model with event listeners -->
+      <a-entity id="pensador" gltf-model="#emperador" position="-0.4 1.7 -1.9" rotation="0 90 0" scale="1.4 1.4 1.4"
+        animation="property: position; dur: 2000; from: -0.4 1.7 -1.9; to: -0.4 1.8 -1.9; dir: alternate; loop: true"
+        event-set__enter="_event: mouseenter; _target: #info; visible: true"
+        event-set__leave="_event: mouseleave; _target: #info; visible: false">
       </a-entity>
 
       <!-- Wooden Cylinder -->
@@ -39,12 +41,12 @@
         <a-animation attribute="position" to="0 1.5 -5" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
       </a-sphere>
 
-      <!-- Floor -->
-      <a-plane color="#7BC8A4" rotation="-90 0 0" width="20" height="20"></a-plane>
+     
 
-      <!-- Text -->
-      <a-text value="Welcome to the VR Experience!" color="#FFFFFF" position="-1 2 -3" scale="2 2 2"></a-text>
-      
+      <!-- Info Text -->
+      <a-text id="info" value="The Thinker: A bronze sculpture by Auguste Rodin, usually placed on a stone pedestal. The work depicts a nude male figure of over life-size sitting on a rock with his chin resting on one hand as though deep in thought, often used as an image to represent philosophy." 
+              color="#000000" position="0 3 -3" scale="1.5 1.5 1.5" visible="false"></a-text>
+
     </a-scene>
     
   </body>
